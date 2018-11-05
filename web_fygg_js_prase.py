@@ -57,7 +57,7 @@ def process_item( item):
 
 
 allowed_domains = 'https://rmfygg.court.gov.cn'
-for _ in range(5):
+for _ in range(50):
     root = etree.HTML(driver.page_source)
     all_gg = root.xpath('//tbody[@class="rmfy-table-tbody"]/tr')
     for pics in all_gg:
@@ -75,7 +75,7 @@ for _ in range(5):
         item['file_type'] = file_type
         item['zx_data'] = zx_data
         process_item(item)
-    time.sleep(5)
+    time.sleep(15)
     #driver.find_elements_by_id("noticeListTable_next")[0].click()
     driver.find_elements_by_class_name("paginate_button")[-2].click()
     webdriver.support.ui.WebDriverWait(driver, 1).until(lambda x: x.find_element_by_id("gg-list"))
