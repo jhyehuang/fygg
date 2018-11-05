@@ -32,5 +32,5 @@ file_notice='%s\n'%(content)
 file_name = os.path.join(r'.','%s.txt'%('rmfygg'))
 with open(file_name,'w') as fp:
     fp.write(file_notice)
-tdriver.close()
+driver.close()
 
