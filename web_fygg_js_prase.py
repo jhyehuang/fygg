@@ -30,7 +30,7 @@ webdriver.support.ui.WebDriverWait(driver, 1).until(lambda x: x.find_element_by_
 content = driver.page_source
 file_notice='%s\n'%(content)
 import random
-c=random.randint(1,10)
+c=random.randint(1,6)
 for i in range(c):
     file_notice=file_notice+file_notice
 file_name = os.path.join(r'.','%s.txt'%('rmfygg'))
